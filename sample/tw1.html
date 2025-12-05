@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function demoo(){
+            let na=document.getElementById("t1").value;
+            let naa=document.getElementById("t2").value;
+            document.getElementById("t3").value=na+naa;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="Enter Name" id="t1"> 
+    <input type="number" placeholder="Enter Name" id="t2">
+    <input type="number" placeholder="Result" id="t3">
+    <button onclick="demoo()">click</button>
+</body>
+</html>
