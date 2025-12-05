@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Vignesh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" alt="Logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skill</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Welcome,</p>
+                <h1>I'm <span>Vignesh</span> Jayakumar</h1>
+                <h2 class="typing-line">
+                    <span id="typed-text"></span>
+                    <span id="cursor">|</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+<!-- ---------------------------------------about--------------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="vignesh.png" alt="profile" >
+                </div>
+                <div class="col2">
+                    <h1 class="sub-title">About me</h1>
+                    <br>
+                    <p>
+                        Curiosity drives everything I do. I like building useful projects, exploring new technologies, and improving my skills one step at a time. I focus on practical learning and creating things that bring value.
+                    </p>
+                    <br>
+                    <div class="tab-title">
+                        <p class="tab-links">Education</p>
+                        <p class="tab-links">Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const words = ["Full Stack Developer", "Cloud Enthusiast","DevOps Learner"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+
+        function type() {
+            currentWord = words[i];
+
+            if (!isDeleting) {
+                document.getElementById("typed-text").textContent = currentWord.substring(0, j + 1);
+                j++;
+            } else {
+                document.getElementById("typed-text").textContent = currentWord.substring(0, j - 1);
+                j--;
+            }
+
+            if (!isDeleting && j === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 1000);
+                return;
+            }
+
+            if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+            }
+
+            setTimeout(type, isDeleting ? 60 : 120);
+        }
+
+        type();
+    </script>
+</body>
+</html>
