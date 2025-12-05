@@ -1,0 +1,31 @@
+<script>
+function demo(){
+    console.log("demo function")
+}
+demo()
+let sampl=()=>{
+    console.log("arrow function")
+    return "india"
+}
+console.log(sampl())
+let press=(a,b)=>a+b;
+console.log(press(11,22))
+
+let ar=[1,2,3,4]
+let [a,b,d]=ar
+console.log(a)
+console.log(b)
+console.log(d)
+
+
+let st={na:"arun",ci:"chennai"}
+let {na:n,ci:c}=st
+console.log(n)
+console.log(c)
+
+console.log("1")
+setInterval(()=>{
+    console.log("hello")
+},2000);
+console.log("2")
+</script>
