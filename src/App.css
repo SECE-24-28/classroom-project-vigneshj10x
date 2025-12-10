@@ -1,20 +1,12 @@
 #root {
-<<<<<<< HEAD
-  max-inline-size: 1280px;
-=======
   max-width: 1280px;
->>>>>>> 14878df3d0f33889f70db06e045ba8c7dfd2da9b
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
 .logo {
-<<<<<<< HEAD
-  block-size: 6em;
-=======
   height: 6em;
->>>>>>> 14878df3d0f33889f70db06e045ba8c7dfd2da9b
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
@@ -48,9 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-<<<<<<< HEAD
-li{
-  list-style-type: none;;
-}
-=======
->>>>>>> 14878df3d0f33889f70db06e045ba8c7dfd2da9b
